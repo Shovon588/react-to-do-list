@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background: rgb(54, 78, 214);
+}
+
+.center-div{
+  height: 700px;
+  width: 450px;
+  margin: 8% auto 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: auto;
+  position: relative;
+}
+
+.header-div{
+  margin-top: 10%;
+  padding: 1px;
+  background-color: rgb(153, 151, 151);
+  text-align: center;
+}
+
+.input-div{
+  width: 70%;
+  margin: 5% auto 0 auto;
+  padding: 4%;
+}
+
+.add-item{
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 10%;
+  outline: none;
+  font-size: 18px;
+}
+
+.add-item-btn{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  outline: none;
+  font-size: 35px;
+  color: #fff;
+  background-color: rgb(54, 78, 214);
+  border: none;
+}
+
+.add-item-btn:hover {
+  background-color: rgb(47, 235, 56);
+  color: black;
+}
+
+.list-div{
+  width: 70%;
+  margin: 5% auto 0 auto;
+  padding: 4%;
+  text-align: justify;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  margin-left: -2em;
+  margin-bottom: 5%;
+}
+
+.remove-item-btn{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  background-color: rgb(54, 78, 214);
+  border: none;
+  margin-right: 5%;
+  padding: 5px;
+}
+
+.remove-item-btn:hover {
+  background-color: rgb(255, 8, 8);
+  color: black;;
+}
