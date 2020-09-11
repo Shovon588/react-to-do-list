@@ -7,9 +7,9 @@ body{
 }
 
 .center-div{
-  height: 700px;
+  height: 650px;
   width: 450px;
-  margin: 8% auto 0 auto;
+  margin: 5% auto 0 auto;
   background-color: #fff;
   border-radius: 5px;
   overflow: auto;
@@ -55,36 +55,7 @@ body{
   color: black;
 }
 
-.list-div{
-  width: 70%;
-  margin: 5% auto 0 auto;
-  padding: 4%;
-  text-align: justify;
-}
-
-ul{
-  list-style: none;
-}
-
-li{
-  margin-left: -2em;
-  margin-bottom: 5%;
-}
-
-.remove-item-btn{
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  outline: none;
-  font-size: 22px;
-  color: #fff;
-  background-color: rgb(54, 78, 214);
-  border: none;
-  margin-right: 5%;
-  padding: 5px;
-}
-
-.remove-item-btn:hover {
-  background-color: rgb(255, 8, 8);
-  color: black;;
+.check{
+  font-size: 18px;
+  margin-left: 19%;
 }
