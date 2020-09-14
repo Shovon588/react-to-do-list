@@ -6,7 +6,7 @@ import Lists from './Lists/Lists.js'
 class App extends Component {
 
   state = {
-    items: []
+    items: [],
   }
 
   userInput = (event) => {
@@ -29,6 +29,8 @@ class App extends Component {
       this.setState({
         items: new_state
       })
+
+      this.postData(user_input, time)
     }
   }
 
@@ -41,30 +43,72 @@ class App extends Component {
   deleteHandler = (event) =>{
     event.preventDefault();
     var key = event.target.value;
+    console.log(key)
     var cur_state = this.state.items;
 
-    console.log(cur_state)
-    var toDelete = cur_state.indexOf(cur_state.filter(obj => obj.name===key)[0])
-    cur_state.splice(toDelete, 1)
+    var toDelete = cur_state.filter(obj => obj.timestamp===key)[0]
+    var indexToDelete = cur_state.indexOf(toDelete)
+    cur_state.splice(indexToDelete, 1)
 
-    console.log(cur_state)
 
     this.setState({
       items: cur_state
     })
 
+    // this.deleteData(toDelete.id)
+
   }
 
+  deleteData = (id) => {
+    var url = "http://127.0.0.1:8000/api/todos/" + id + "/"
+    fetch(url, {method: "DELETE",}).then(response => {
+          console.log(response)
+        })
+      }
+
+  postData = (user_input, time) => {
+    var url = "http://127.0.0.1:8000/api/todos/"
+    fetch(url, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({name: user_input, timestamp: time})
+    }).then(response => {
+      console.log(response)
+    })
+  }
+
+  fetchData = () => {
+    fetch("http://127.0.0.1:8000/api/todos/")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            items: result
+          })
+
+          console.log(result)
+        });
+    }
+
+  componentWillMount = () => {
+    this.fetchData()
+  }
+
+
   render(){
+
     let new_list = (
       <div>
         {this.state.items.map(item => {
-          return <Lists unique={item.name} name={item.name} click={this.deleteHandler}/>
+          return <Lists value={item.timestamp} name={item.name} click={this.deleteHandler}/>
         })}
       </div>
     )
 
     return (
+
 
       <div className="App">
         <div className="center-div">
@@ -75,11 +119,11 @@ class App extends Component {
             <input type="text" placeholder="Add an item..." className="add-item" id="user-input" onChange={this.changeHandler}/>
             <button className="add-item-btn" onClick={this.userInput}> + </button>
           </div>
+
           <div className="list-div">
             <ul>
               {new_list}
             </ul>
-
             <p className='check' id='check'></p>
           </div>
         </div>
