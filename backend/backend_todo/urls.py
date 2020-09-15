@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . api import router
+from rest_api import apiviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include(router.urls))
+    path("api/", include(router.urls)),
+    path("api/delete/<str:timestamp>/", apiviews.ToDoApiView.as_view(), name='delete'),
 ]
