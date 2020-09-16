@@ -1,33 +1,39 @@
-.list-div{
+.list-div {
   width: 70%;
   margin: 0 auto 0 auto;
   padding: 4%;
   text-align: justify;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-li{
+li {
   margin-left: -1.6em;
   margin-bottom: 5%;
 }
 
-.remove-item-btn{
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  outline: none;
-  font-size: 22px;
-  color: #fff;
-  background-color: rgb(54, 78, 214);
+.fa-trash,
+.fa-edit,
+.fa-check {
   border: none;
-  margin-right: 5%;
-  padding: 5px;
+  background: none;
+  outline: none;
+  font-size: 30px;
 }
 
-.remove-item-btn:hover {
-  background-color: rgb(255, 8, 8);
-  color: black;;
+.fa-check:hover {
+  color: #28a745;
+  cursor: pointer;
+}
+
+.fa-edit:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  color: #dc3545;
+  cursor: pointer;
 }
