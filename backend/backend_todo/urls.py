@@ -21,5 +21,6 @@ from rest_api import apiviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include(router.urls)),
-    path("api/delete/<str:timestamp>/", apiviews.ToDoApiView.as_view(), name='delete'),
+    path("delete/<str:timestamp>/", apiviews.DeleteApiView.as_view(), name='delete'),
+    path("patch/<str:timestamp>/<str:patch_name>/", apiviews.PatchApiView.as_view(), name='patch'),
 ]
