@@ -2,13 +2,13 @@
   text-align: center;
 }
 
-body{
+body {
   background: rgb(54, 78, 214);
 }
 
-.center-div{
-  height: 650px;
-  width: 450px;
+.center-div {
+  height: 700px;
+  width: 500px;
   margin: 5% auto 0 auto;
   background-color: #fff;
   border-radius: 5px;
@@ -16,20 +16,20 @@ body{
   position: relative;
 }
 
-.header-div{
+.header-div {
   margin-top: 10%;
   padding: 1px;
   background-color: rgb(153, 151, 151);
   text-align: center;
 }
 
-.input-div{
+.input-div {
   width: 70%;
   margin: 5% auto 0 auto;
   padding: 4%;
 }
 
-.add-item{
+.add-item {
   width: 200px;
   height: 60px;
   border: none;
@@ -39,23 +39,12 @@ body{
   font-size: 18px;
 }
 
-.add-item-btn{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  outline: none;
-  font-size: 35px;
-  color: #fff;
-  background-color: rgb(54, 78, 214);
-  border: none;
-}
-
-.add-item-btn:hover {
-  background-color: rgb(47, 235, 56);
-  color: black;
-}
-
-.check{
+.check {
   font-size: 18px;
   margin-left: 19%;
+}
+
+.fa-arrow-circle-right:hover {
+  color: #28a745;
+  cursor: pointer;
 }
