@@ -1,5 +1,5 @@
 # Md. Minul Islam Shovon
-## ECE, RUET
+## ECE'15, RUET
 #### Linkedin: https://www.linkedin.com/in/mainulislam588/
 
 ## What is this repository?
