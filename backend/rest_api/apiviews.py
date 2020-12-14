@@ -15,7 +15,6 @@ class DeleteApiView(APIView):
                         status=status.HTTP_200_OK)
 
 
-
 class PatchApiView(APIView):
     def patch(self, request, timestamp, patch_name):
         data = request.data
